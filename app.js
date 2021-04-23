@@ -16,7 +16,7 @@ app.set('view engine', 'ejs')
 
 
 
-var operationPassword = fs.readFileSync("operationpassword.txt", "utf8")
+var operationPassword = fs.readFileSync("operationpassword.txt", "utf8") // the teacher password should be stored in operationpassword.txt in the root directory
 var maxPeople = 15 // This value should at least be 1 (>=1)
 
 
