@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Night Studio Clear All Data</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery-3.3.1.slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		div.input-group.mb-3 {
+			margin-bottom: 0!important;
+		}
+		p {
+			text-align: center;
+			margin-top: 7%;
+			color: rgba(255, 255, 255, 0.87);
+			font-family: "Sans Serif";
+			font-size: 250%;
+			font-weight: 400;
+			margin-bottom: 1%;
+		}
+		.form-control {
+			border-radius: 1.5rem;
+			background-color: rgba(255, 255, 255, 0.62);
+		}
+		.input-group-text {
+			border-radius: 1.5rem;
+			background-color: rgba(255, 255, 255, 0.87);
+		}
+		select.custom-select {
+			border-radius: 1.5rem;
+			background-color: rgba(255, 255, 255, 0.62);
+		}
+		button.btn {
+			border-radius: 1.5rem;
+			padding: 0.4%;
+			margin-top: 7%
+		}
+		div.input-group {
+			margin-top: 0.7%;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="back-logo-black.png" onclick="goBack()">
+	<p>Night Studio Clear All Data</p>
+	<div class="row">
+		<span class="col-md-2 col-lg-2 col-sm-0"></span>
+		<div class="col-md-8 col-lg-8 col-sm-12">
+			<form action="clearAllDataSubmit" method="post">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Operation Password</span>
+					</div>
+					<input type="password" name="opCode" aria-label="Class Name" placeholder="" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-outline-info btn-lg btn-block mb-2">Submit</button>
+			</form>
+		</div>
+		<span class="col-md-2 col-lg-2 col-sm-0"></span>
+	</div>
+
+</body>
+</html>

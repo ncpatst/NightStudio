@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</head>
+<body>
+
+	<img src="back-logo-black.png" onclick="goBack()">
+	<p style="font-size: 200%;">An error occurred,</p>
+	<p style="font-size: 200%;"><%= message %></p>
+
+	<script type="text/javascript">
+		function goBack() {
+		    window.history.back();
+		}
+		setTimeout(function(){ goBack() }, 3500);
+	</script>
+
+</body>
+</html>

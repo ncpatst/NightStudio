@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Sign-up Results</title>
+	<script src="jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<img src="back-logo-black.png" onclick="goBack()">
+	<p style="font-size: 200%;">Thank you, the request has been submitted.</p>
+	<p style="font-size: 200%;">Please keep track of your Verification Code.</p>
+	<p style="font-size: 150%;"><%= firstName %> <%= lastName %> (Grade <%= grade %>)</p>
+	<p style="font-size: 150%;">Class: <%= classs %></p>
+	<p style="font-size: 150%;">Time Period: <%= timePeriod %> PM</p>
+	<p style="font-size: 150%;">Verification Code: <span style="color: #F88"><%= cancelCode %></span></p>
+
+</body>
+</html>

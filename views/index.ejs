@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Night Studio Sign-up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		button {
+			display: inline-block;
+			border-radius: 300px;
+			background-color: rgba(92, 92, 92, 0.75);
+			border: none;
+			color: #FFF;
+			text-align: center;
+			font-size: 150%;
+			padding: 0.8%;
+			width: 70%;
+			font-family: "Sans Serif";
+			margin-left: 15%;
+			margin-right: 15%;
+			margin-bottom: 5%
+		}
+		button:hover {
+			display: inline-block;
+			border-radius: 300px;
+			background-color: rgba(255, 255, 255, 0.67);
+			border: none;
+			color: #000;
+			text-align: center;
+			font-size: 150%;
+			padding: 0.8%;
+			width: 70%;
+			font-family: "Sans Serif";
+			margin-left: 15%;
+			margin-right: 15%;
+			margin-bottom: 5%
+		}
+
+		button span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+		button span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+			color: #000;
+		}
+		
+		button:hover span {
+			padding-right: 25px;
+		}
+
+		button:hover span:after {
+			opacity: 1;
+			right:		;
+		}
+
+		p {
+			font-family: "Sans Serif";
+			font-size: 300%;
+			margin: 3.5% 0;
+			color: #FFFFFF;
+		}
+		img {
+			z-index: 3;
+			position: relative;
+			height: 5rem;
+			width: 5rem;
+			margin-right: 2%;
+			vertical-align: middle;
+		}
+
+</style>
+</head>
+<body>
+
+	<div style="text-align: center;">
+		<p><img src="new-pulao-white.png"><span style="vertical-align: middle;">Night Studio Sign-up</span></p>
+	</div>
+	<button onclick="location.href='signup'"><span>Sign-up</span></button><br>
+	<button onclick="location.href='dataPanel'"><span>Data Panel</span></button><br>
+	<button onclick="location.href='cancel'"><span>Cancel Request</span></button>
+
+</body>
+</html>

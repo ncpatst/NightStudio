@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Night Studio Sign-up</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery-3.3.1.slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		/*Moved to style.css file*/
+	</style>
+</head>
+<body>
+
+	<img src="back-logo-black.png" onclick="goBack()">
+	<p>Night Studio Sign-up</p>
+	<div class="row">
+		<span class="col-md-2 col-lg-2 col-sm-0"></span>
+		<div class="col-md-8 col-lg-8 col-sm-12">
+			<form action="submit" method="get">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">First & Last Name</span>
+					</div>
+					<input type="text" name="firstName" aria-label="First name" placeholder="First Name" class="form-control">
+					<input type="text" name="lastName" aria-label="Last name" placeholder="Last Name" class="form-control">
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Class</span>
+					</div>
+					<input type="text" name="classs" aria-label="Class Name" placeholder="Name of the Class" class="form-control">
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">Grade</label>
+					</div>
+					<select class="custom-select" id="inputGroupSelect01" name="grade">
+						<option selected>Select your grade...</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">Time Period</label>
+					</div>
+					<select class="custom-select" id="inputGroupSelect01" name="timePeriod">
+						<option selected>Select your desired time periods...</option>
+						<option value="7-8">7-8 p.m. - <%= firstPeriodCount %>/15</option>
+						<option value="8-9">8-9 p.m. - <%= secondPeriodCount %>/15</option>
+						<option value="7-9">7-9 p.m. - <%= fullTimeCount %>/15</option>
+					</select>
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Purpose</span>
+					</div>
+					<input type="text" name="purpose" aria-label="Purpose Info" placeholder="Info of the Purpose" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-outline-info btn-lg btn-block mb-2">Submit</button>
+			</form>
+		</div>
+		<span class="col-md-2 col-lg-2 col-sm-0"></span>
+	</div>
+
+</body>
+</html>

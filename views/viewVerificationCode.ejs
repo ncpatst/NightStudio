@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Night Studio View Verification Code</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery-3.3.1.slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		/*Moved to style.css file*/
+	</style>
+</head>
+<body>
+
+	<img src="back-logo-black.png" onclick="goBack()">
+	<p>Night Studio View Verification Code</p>
+	<div class="row">
+		<span class="col-md-2 col-lg-2 col-sm-0"></span>
+		<div class="col-md-8 col-lg-8 col-sm-12">
+			<form action="viewVerificationCodeSubmit" method="post">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Operation Password</span>
+					</div>
+					<input type="password" name="opCode" aria-label="Class Name" placeholder="" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-outline-info btn-lg btn-block mb-2">Submit</button>
+			</form>
+		</div>
+		<span class="col-md-2 col-lg-2 col-sm-0"></span>
+	</div>
+
+</body>
+</html>
