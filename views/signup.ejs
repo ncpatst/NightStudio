@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Night Studio Sign-up</title>
+	<title>AudioHive Sign-up</title>
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<script src="jquery-3.3.1.slim.min.js"></script>
 	<script src="popper.min.js"></script>
@@ -46,14 +46,9 @@
 				</div>
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
-						<label class="input-group-text" for="inputGroupSelect01">Time Period</label>
+						<label class="input-group-text" for="inputGroupSelect01">Additional People</label>
 					</div>
-					<select class="custom-select" id="inputGroupSelect01" name="timePeriod" required>
-						<option value>Select your desired time periods...</option>
-						<option value="7-8">7-8 p.m. - <%= firstPeriodCount %>/15</option>
-						<option value="8-9">8-9 p.m. - <%= secondPeriodCount %>/15</option>
-						<option value="7-9">7-9 p.m. - <%= fullTimeCount %>/15</option>
-					</select>
+					<input type="text" name="" aria-label="Additional People" placeholder="List up 5 additional students that will join you" class="form-control" required>
 				</div>
 				<div class="input-group">
 					<div class="input-group-prepend">
