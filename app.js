@@ -14,25 +14,14 @@ app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
 app.set('view engine', 'ejs')
 
-
-
 var operationPassword = fs.readFileSync("operationpassword.txt", "utf8") // the teacher password should be stored in operationpassword.txt in the root directory
 var maxPeople = 15 // This value should at least be 1 (>=1)
 
-
-// Legacy
-var beginSignupHour = 8 // This value should be between 0 and 23, |endSignupHour - beginSignupHour| should at least be 1 (>=1)
-var endSignupHour = 17 // This value should be between 0 and 24, |endSignupHour - beginSignupHour| should at least be 1 (>=1)
-endSignupHour-- // Do NOT change this
-// /Legacy
-
 // New time system 2020
-const openHour = 08 //the hour when signup opens; 0 <= openHour <= 23
+const openHour = 06 //the hour when signup opens; 0 <= openHour <= 23
 const openMin = 00 //the minute when signup opens; 0 <= openMin <= 59
 const closeHour = 16 //the hour when signup closes; 0 <= closeHour <= 23
 const closeMin = 30 //the minute when signup closes; 0 <= closeMin <= 59
-
-// replacing all inTimeInterval() with checkOpenStatus()
 
 function checkOpenStatus() {
   var date = new Date();
