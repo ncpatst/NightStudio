@@ -7,9 +7,16 @@
 	<script src="popper.min.js"></script>
 	<script src="bootstrap.min.js"></script>
 	<link rel="stylesheet" href="style.css">
-	<style type="text/css">
-		/*Moved to style.css file*/
-	</style>
+	<script>
+		var form = document.getElementById("checkform");
+		// var submitBtn = document.getElementById("sugnupsubmit");
+		// form.addEventListener("submit", function(e) {
+		// 				// 禁用提交按钮
+		// 	submitBtn.disabled = true;
+		// });
+		form.addEventListener('click', _.throttle(save, 300))
+
+	</script>
 </head>
 <body>
 
@@ -18,7 +25,7 @@
 	<div class="row">
 		<span class="col-md-2 col-lg-2 col-sm-0"></span>
 		<div class="col-md-8 col-lg-8 col-sm-12">
-			<form action="submit" method="get">
+			<form action="submit" method="get" id="checkform">
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text">First & Last Name</span>
@@ -28,9 +35,24 @@
 				</div>
 				<div class="input-group">
 					<div class="input-group-prepend">
+						<span class="input-group-text">Student ID</span>
+					</div>
+					<input type="text" name="studentID" aria-label="Student ID" placeholder="Student id" class="form-control" required>
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
 						<span class="input-group-text">Class</span>
 					</div>
-					<input type="text" name="classs" aria-label="Class Name" placeholder="Name of the Class" class="form-control" required>
+					<select class="custom-select" id="inputGroupSelect01" name="studentclass" required>
+						<option value>Select your class...</option>
+						<option value="Art Foundations">Art Foundations</option>
+						<option value="Mixed Media 2D">Mixed Media 2D</option>
+						<option value="Mixed Media 3D">Mixed Media 3D</option>
+						<option value="Graphic Design">Graphic Design</option>
+						<option value="Ceramics">Ceramics</option>
+						<option value="Pre-AP Visual Arts">Pre-AP Visual Arts</option>
+						<option value="AP Studio Art">AP Studio Art</option>
+					</select>
 				</div>
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
@@ -44,28 +66,39 @@
 						<option value="12">12</option>
 					</select>
 				</div>
-				<div class="input-group mb-3">
-					<div class="input-group-prepend">
-						<label class="input-group-text" for="inputGroupSelect01">Time Period</label>
-					</div>
-					<select class="custom-select" id="inputGroupSelect01" name="timePeriod" required>
-						<option value>Select your desired time periods...</option>
-						<option value="7-8">7-8 p.m. - <%= firstPeriodCount %>/15</option>
-						<option value="8-9">8-9 p.m. - <%= secondPeriodCount %>/15</option>
-						<option value="7-9">7-9 p.m. - <%= fullTimeCount %>/15</option>
-					</select>
-				</div>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text">Purpose</span>
 					</div>
-					<input type="text" name="purpose" aria-label="Purpose Info" placeholder="Info of the Purpose" class="form-control" required>
+					<select class="custom-select form-control" id="inputGroupSelectpurpose" name="purpose" aria-label="Purpose Info" placeholder="Info of the Purpose" required>
+						<option value>Select your purpose...</option>
+						<option value="Formative">Formative</option>
+						<option value="Summative">Summative</option>
+						<option value="Personal project">Personal project</option>
+					</select>
 				</div>
-				<button type="submit" class="btn btn-outline-info btn-lg btn-block mb-2">Submit</button>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect">Time Period</label>
+					</div>
+					<div class="custom-checkbox form-control">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="true" name="seventoeight">
+							<label class="form-check-label" for="inlineCheckbox1"> 7-8 p.m - <%= firstPeriodCount %>/30</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="true" name="eighttonine">
+							<label class="form-check-label" for="inlineCheckbox2">8-9 p.m - <%= secondPeriodCount %>/30</label>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-outline-info btn-lg btn-block mb-2" id="sugnupsubmit">Submit</button>
 			</form>
 		</div>
 		<span class="col-md-2 col-lg-2 col-sm-0"></span>
 	</div>
 
 </body>
+<script>
+</script>
 </html>

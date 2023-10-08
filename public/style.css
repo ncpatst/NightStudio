@@ -71,15 +71,32 @@ img { /*This is for the back button*/
 	width: 4rem;
 	margin-left: 3%;
 }
+.checkbox-control{
+	background-color: rgba(255, 255, 255, 0.62);
+}
+.test{
+	color: #333;
+		font-family: Helvetica, Arial, sans-serif;
+		width: 640px; 
+		height: 800px;
+		border-collapse: 
+		collapse; border-spacing: 0; 
+		margin: 0px auto; /*Align_Center*/
+		overflow-y:auto;
+		border: 1px;
+}
 
 /*Table*/
 	table {  
 		color: #333;
 		font-family: Helvetica, Arial, sans-serif;
 		width: 640px; 
+		height: 800px;
 		border-collapse: 
 		collapse; border-spacing: 0; 
 		margin: 0px auto; /*Align_Center*/
+		overflow-y:auto;
+		border: 1px;
 	}
 
 	td, th {  
@@ -108,3 +125,5 @@ img { /*This is for the back button*/
 
 	tr td:hover { background: rgba(255, 255, 255, 0.93); color: #000; }  
 	/* Hover cell effect! */
+
+	
